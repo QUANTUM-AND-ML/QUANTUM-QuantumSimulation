@@ -184,8 +184,8 @@ if __name__ == '__main__':
             pass
 
     dictionary = dict(zip(local2gate_initial, values))
-    local2gate_sort = dict(sorted(dictionary.items(), key=lambda x: x[1], reverse=False)).keys() #将字典按照值的大小进行升序排序，并将排序好的键输出
-    local2gate_simplification = list(local2gate_sort) #获得排序后Two local门的列表
+    local2gate_sort = dict(sorted(dictionary.items(), key=lambda x: x[1], reverse=False)).keys() # Sort the dictionary in ascending order by the size of the values and output the sorted keys
+    local2gate_simplification = list(local2gate_sort) # Get the list of Two local doors after sorting
     #print(local2gate_simplification)
     circuit2, circuit1 = simplification(local2gate_simplification)
     print('   ' + 'TM')
