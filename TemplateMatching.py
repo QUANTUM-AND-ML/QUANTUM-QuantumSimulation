@@ -7,32 +7,28 @@ theta = Parameter("$\\theta$")
 # To obtain the order of qubits and the number of qubits required for the action of the Two local gate list.
 def extract_bit(local2gate_simplification):
     '''
-    :param local2gate_simplification:输入的列表形式Two local门，example: ['Z0X1', 'Z0Y1', 'Z1X2', 'Y1X2', 'Y1Z2', 'X1X2', 'Y2X3', 'Y2Z3', 'Z2Z3', 'Z0Z2', 'Z1X3', 'Y1Z3', 'X1X3', 'Z1Z3']
-    :return types_of_gates:提取作用的Two local门的类型；local2gate_initial_mark:提取的作用比特列表，按照作用对的形式排列；count：作用比特的最大值，确定需要量子比特的数量
+    :param local2gate_simplification:Two local gates，example: ['Z0X1', 'Z0Y1', 'Z1X2', 'Y1X2', 'Y1Z2', 'X1X2', 'Y2X3', 'Y2Z3', 'Z2Z3', 'Z0Z2', 'Z1X3', 'Y1Z3', 'X1X3', 'Z1Z3']
+    :return types_of_gates: the role of Two local doors of type
     '''
-    local2gate_initial_mark = []  # 新建空列表，用以存储提取的数值
-    a = ''  # 将空值赋值给a
+    local2gate_initial_mark = []  
+    a = ''  
     for j in range(0, len(local2gate_simplification), 1):
-        for i in local2gate_simplification[j]:  # 将字符串进行遍历
-            if str.isdigit(i):  # 判断i是否为数字，如果“是”返回True，“不是”返回False
-                a += i  # 如果i是数字格式，将i以字符串格式加到a上
+        for i in local2gate_simplification[j]:  
+            if str.isdigit(i):  
+                a += i  
             else:
-                a += " "  # 如果i不是数字格式，将“ ”（空格）加到a上
-    # 数字与数字之间存在许多空格，所以需要对字符串a按''进行分割。
-    num_list = a.split(" ")  # 按''进行分割，此时a由字符串格式编程列表
-    #print("num_list is \n", num_list)
-    for i in num_list:  # 对列表a，进行遍历
-        try:  # try 结构体，防止出错后直接退出程序
+                a += " " 
+    num_list = a.split(" ")  
+    for i in num_list:  
+        try:  
             if int(i) >= 0:
-                local2gate_initial_mark.append(int(i))  # 如果列表a的元素为数字，则赋值给num_list_new
+                local2gate_initial_mark.append(int(i))  
             else:
-                pass  # 如果不是数字，pass
+                pass 
         except:
             pass
     #print("local2gate_initial is \n", local2gate_initial_mark)
     count = max(local2gate_initial_mark)
-    # 打印出的结果
-    #print("len(local2gate_initial):", len(local2gate_initial_mark))  # 作为验证，可以数一下列表元素个数
     b = []
     for i in range(0, len(local2gate_initial_mark), 2):
         b.append(local2gate_initial_mark[i:i + 2])
@@ -46,20 +42,13 @@ def extract_bit(local2gate_simplification):
     return types_of_gates, local2gate_initial_mark, count
 
 def neighbor(ansatz,order):
-    '''
-    :param ansatz:输入的量子线路结构，列表格式; Example: [('rx', 0), ('rz', 1), ('cx', 0, 1)];
-    :param order: 所查找量子门所处量子线路结构的列表标记; Example:第一个量子门，所处列表标记为0
-    :return:Control_Bit:初始为[-1,-1],单比特门只考虑这个，列表的第一位是前面相邻门的序号，两比特门是控制位对应前面序号，列表第二位是后面相邻门序号，两比特类似,
-            Controlled_Bit:初始为[-1，-1]，两比特门受控位对应相邻门的序号，列表第一位是前面相邻列表的序号，列表第二位是后面相邻门序号,
-            Quantum_Gate_Marking:初始为[0，0，0，0]，共四位的列表，前两个代表控制比特前后邻居门的类型，1表示单比特门，2表示两比特门的控制位，3表示两比特门的受控位，后两个表示受控比特的前后邻居门的类型;
-    '''
     Control_Bit = [-1,-1]
     Controlled_Bit = [-1,-1]
     Quantum_Gate_Marking = [0,0,0,0]
 
-    #判断Rx,Rz前后的邻居编号
+    # Determine the neighbor numbers before and after Rx,Rz
     if ansatz[order][0] == 'rx' or ansatz[order][0] == 'rz' or ansatz[order][0] == 'h':
-        #寻找前面邻居编号
+        # Find front neighbor number
         if order == 0:
             Control_Bit[0] = -1
             Controlled_Bit[0] = -1
@@ -80,9 +69,9 @@ def neighbor(ansatz,order):
                         Quantum_Gate_Marking[0] = 3
                         break
                 else:
-                    print('出现未知量子门')
+                    print('Appearance of unknown quantum gates')
                     break
-        #寻找后面邻居编号
+        # Find the neighbor number behind
         if order == len(ansatz):
             Control_Bit[1] = -1
             Controlled_Bit[1] = -1
@@ -103,12 +92,12 @@ def neighbor(ansatz,order):
                         Quantum_Gate_Marking[1] = 3
                         break
                 else:
-                    print('出现未知量子门')
+                    print('Appearance of unknown quantum gates')
                     break
 
-    #判断Cx前后的邻居编号
+    # Determine the neighbor numbers before and after Cx
     elif ansatz[order][0] == 'cx':
-        #寻找前面控制比特的邻居编号
+        # Find the neighbor number of the previous control bit
         if order == 0:
             Control_Bit[0] = -1
             Controlled_Bit[0] = -1
@@ -128,7 +117,7 @@ def neighbor(ansatz,order):
                         Control_Bit[0] = i
                         Quantum_Gate_Marking[0] = 3
                         break
-        #寻找后面控制比特的邻居编号
+        # Find the neighbor number of the control bit that follows
         if order == len(ansatz):
             Control_Bit[1] = -1
             Controlled_Bit[1] = -1
@@ -148,7 +137,7 @@ def neighbor(ansatz,order):
                         Control_Bit[1] = i
                         Quantum_Gate_Marking[1] = 3
                         break
-        #寻找前面受控制比特的邻居编号
+        # Find the neighbor number of the previous controlled bit
         if order == 0:
             Control_Bit[0] = -1
             Controlled_Bit[0] = -1
@@ -168,7 +157,7 @@ def neighbor(ansatz,order):
                         Controlled_Bit[0] = i
                         Quantum_Gate_Marking[2] = 3
                         break
-        #寻找后面受控制比特的邻居编号
+        # Find the neighbor number of the controlled bit that follows
         if order == len(ansatz):
             Control_Bit[1] = -1
             Controlled_Bit[1] = -1
@@ -190,7 +179,7 @@ def neighbor(ansatz,order):
                         break
 
     else:
-        print('查找的是未知的量子门')
+        print('The search is for unknown quantum gates')
     return Control_Bit,Controlled_Bit,Quantum_Gate_Marking
 
 def Search_parameters(ansatz, order):
@@ -200,12 +189,8 @@ def Search_parameters(ansatz, order):
             new_order = new_order + 1
     return new_order
 
-#删除两个重复的CNOT门
+# Delete two duplicate CNOT doors
 def rule_CX(ansatz):
-    '''
-    :param ansatz: 输入的量子线路结构，列表格式; Example: [('rx', 0), ('rz', 1), ('cx', 0, 1)];
-    :return: 使用规则一后的量子线路结构;
-    '''
     new_ansatz = list(ansatz)
     Count = len(new_ansatz)
     i = 0
@@ -222,12 +207,8 @@ def rule_CX(ansatz):
     #print('使用规则CX次数:',len(ansatz) - len(new_ansatz))
     return new_ansatz
 
-#删除两个重复的H门
+# Delete two duplicate H-gates
 def rule_H(ansatz):
-    '''
-    :param ansatz: 输入的量子线路结构，列表格式; Example: [('rx', 0), ('rz', 1), ('cx', 0, 1)];
-    :return: 使用规则一后的量子线路结构;
-    '''
     new_ansatz = list(ansatz)
     Count = len(new_ansatz)
     i = 0
@@ -242,15 +223,10 @@ def rule_H(ansatz):
                     Count = Count - 1
         i = i + 1
         Count = Count - 1
-    #print('使用规则H次数:',len(ansatz) - len(new_ansatz))
     return new_ansatz
 
-#删除两个相位相反的RX门
+# Delete two RX gates with opposite phases
 def rule_RX(ansatz,parameters):
-    '''
-    :param ansatz: 输入的量子线路结构，列表格式; Example: [('rx', 0), ('rz', 1), ('cx', 0, 1)];
-    :return: 使用规则一后的量子线路结构;
-    '''
     new_ansatz = list(ansatz)
     new_parameters = list(parameters)
     Count = len(new_ansatz)
@@ -268,10 +244,9 @@ def rule_RX(ansatz,parameters):
                     Count = Count - 1
         i = i + 1
         Count = Count - 1
-    #print('使用规则H次数:',len(ansatz) - len(new_ansatz))
     return new_ansatz,new_parameters
 
-#实现CNOT门数目的统计，输入两个列表，对应门的类型和数目
+# To implement the statistics of the number of CNOT doors, enter two lists, corresponding to the type and number of doors
 def count_CX(types,counts):
     cnotcount = 0
     for i in range(0,len(types),1):
@@ -836,7 +811,7 @@ def simplification(local2gate_simplification):
     circuit_simplification = QuantumCircuit(count + 1)
     circuit_simplification_full = QuantumCircuit(count + 1)
 
-    #原始线路图
+    # Original circuit
     for i in range(0,len(types_of_gates),1):
         if types_of_gates[i] == 'XY':
             a1,b1 = XY(circuit,local2gate_simplification_bit[i])
@@ -860,7 +835,7 @@ def simplification(local2gate_simplification):
             pass
         circuit.barrier()
 
-    #变换后线路图
+    # Transformed circuit
     j = 0
     yzxx = []
     while j < len(types_of_gates):
@@ -967,15 +942,15 @@ def simplification(local2gate_simplification):
     #circuit_simplification.draw(output='mpl')
     #plt.show()
 
-    #测试输入
+    # Input for testing
     count = 0
     for i in range(len(gates)):
         if gates[i][0] == 'rx' or gates[i][0] == 'rz':
             count = count + 1
     if count != len(phase):
-        print('输入结构和相位不匹配')
+        print('Input structure and phase mismatch')
 
-    #应用合并相同的门操作并生成线路
+    # Application merges identical door operations and generates lines
     for i in range(3):
         gates = rule_H(gates)
         gates,phase = rule_RX(gates,phase)
