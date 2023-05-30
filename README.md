@@ -1,5 +1,5 @@
 # **QUANTUM-QuantumSimulation**
-> You can change the value of the parameter "Hamiltonian =" in the main.py file to compare the results of different optimizers.<br><br>
+> You can change the value of the parameter "<span style="color: red;">Hamiltonian =</span>" in the main.py file to compare the results of different optimizers.<br><br>
 # The following packages are included in the simulation environment:
 | Package |  Version  |
 | :-----: | :-----: | 
