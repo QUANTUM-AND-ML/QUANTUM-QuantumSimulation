@@ -112,7 +112,7 @@ if __name__ == '__main__':
     #              results, draw the circuit by plotting qiskit QuantumCircuit)
     #----------------------------------------------------------------------------------------
     #parr = gene_random_oplist(12)
-    Hamiltonian = CH2
+    Hamiltonian = CH2 # Can be modified to (HF, LiH, H2O, NH2, CH2, NH3, CH4, UCCSD-8, UCCSD-12, UCCSD-16, etc.)
     parr = gene_molecule_oplist(Hamiltonian)
     #heisen_parr = [gene_dot_1d(29, interaction='Z')+gene_dot_1d(29, interaction='X')+gene_dot_1d(29, interaction='Y'), gene_dot_2d(4,5, interaction='Z')+gene_dot_2d(4,5, interaction='Y')+gene_dot_2d(4,5, interaction='X'), gene_dot_3d(1,2,4, interaction='Z')+gene_dot_3d(1,2,4, interaction='Y')+gene_dot_3d(1,2,4, interaction='X')]
     #print(heisen_parr[0])
@@ -128,37 +128,32 @@ if __name__ == '__main__':
     local2gate_initial = list(set(local2gate))
     #print(local2gate_initial)
     # 字符串赋值
-    local2gate_initial_mark = []  # 新建空列表，用以存储提取的数值
-    a = ''  # 将空值赋值给a
+    local2gate_initial_mark = []  
+    a = ''  
     for j in range(0,len(local2gate_initial),1):
-        for i in local2gate_initial[j]:  # 将字符串进行遍历
-            if str.isdigit(i):  # 判断i是否为数字，如果“是”返回True，“不是”返回False
-                a += i  # 如果i是数字格式，将i以字符串格式加到a上
+        for i in local2gate_initial[j]: 
+            if str.isdigit(i): 
+                a += i  
             else:
-                a += " "  # 如果i不是数字格式，将“ ”（空格）加到a上
-    # 数字与数字之间存在许多空格，所以需要对字符串a按''进行分割。
-    num_list = a.split(" ")  # 按''进行分割，此时a由字符串格式编程列表
+                a += " "  
+    num_list = a.split(" ")  
     #print("num_list is \n", num_list)
-    for i in num_list:  # 对列表a，进行遍历
-        try:  # try 结构体，防止出错后直接退出程序
+    for i in num_list:  
+        try:  
             if int(i) >= 0:
-                local2gate_initial_mark.append(int(i))  # 如果列表a的元素为数字，则赋值给num_list_new
+                local2gate_initial_mark.append(int(i)) 
             else:
-                pass  # 如果不是数字，pass
+                pass  
         except:
             pass
-    #print("local2gate_initial is \n", local2gate_initial_mark)
-    # 打印出的结果
-    #print("len(local2gate_initial):", len(local2gate_initial_mark))  # 作为验证，可以数一下列表元素个数
     b = []
     for i in range(0, len(local2gate_initial_mark), 2):
         b.append(local2gate_initial_mark[i:i + 2])
     local2gate_initial_mark = b
     #print(local2gate_initial_mark)
-    #将列表排序
     values = [0 for x in range(len(local2gate_initial))]
 
-    #优先计算目标比特的排序
+    #Prioritize the sorting of target bits
     for i in range(0,len(local2gate_initial),1):
         values[i] = abs(local2gate_initial_mark[i][1] - local2gate_initial_mark[i][0])*10000000 +local2gate_initial_mark[i][0]*100
         #for j in range(0,abs(local2gate_initial_mark[i][1] - local2gate_initial_mark[i][0]))
@@ -197,9 +192,3 @@ if __name__ == '__main__':
     print('gate count:\t' + str(sum(circuit1.count_ops().values())))
     print('CNOT count:\t' + str(count_CX(list(circuit1.count_ops().keys()),list(circuit1.count_ops().values()))))
     print('depth:\t\t' + str(circuit1.depth()) + '\n')
-    #print(circuit2)
-    #circuit1 = ConstructCircuit(local2gate_simplification)
-    #circuit1 = circuit1.decompose()
-    #print(circuit1)
-    #print(sum((circuit1.count_ops().values())))
-    #print(circuit2.qasm())
