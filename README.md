@@ -1,7 +1,7 @@
 # **QUANTUM-QuantumSimulation**
- You can change the value of the parameter "Hamiltonian =" in the main.py file to compare the results of different optimizers.
+> You can change the value of the parameter "Hamiltonian =" in the main.py file to compare the results of different optimizers.<br><br>
 # The following packages are included in the simulation environment:
-| 列1      | 列2     |
+| Package |  Version  |
 | :-----: | :-----: | 
 |Jinja2	|3.0.3	|
 |Mako	|1.2.3	|
