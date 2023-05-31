@@ -112,7 +112,7 @@ if __name__ == '__main__':
     #              results, draw the circuit by plotting qiskit QuantumCircuit)
     #----------------------------------------------------------------------------------------
     #parr = gene_random_oplist(12)
-    Hamiltonian = CH2 # Can be modified to (HF, LiH, H2O, NH2, CH2, NH3, CH4, UCCSD-8, UCCSD-12, UCCSD-16, etc.)
+    Hamiltonian = CH2 # Can be modified to (HF, LiH, H2O, NH2, CH2, NH3, CH4, UCCSD-8, etc.)
     parr = gene_molecule_oplist(Hamiltonian)
     #heisen_parr = [gene_dot_1d(29, interaction='Z')+gene_dot_1d(29, interaction='X')+gene_dot_1d(29, interaction='Y'), gene_dot_2d(4,5, interaction='Z')+gene_dot_2d(4,5, interaction='Y')+gene_dot_2d(4,5, interaction='X'), gene_dot_3d(1,2,4, interaction='Z')+gene_dot_3d(1,2,4, interaction='Y')+gene_dot_3d(1,2,4, interaction='X')]
     #print(heisen_parr[0])
