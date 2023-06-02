@@ -7,7 +7,7 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 >Including two consecutive CNOT doors can be eliminated, two identical revolving doors can be fused, etc.
 >
 >**template circuit preparation**
->As an example, if all two-local pauli operators appear between the same bits, they are arranged in the order **XY,XZ,ZX,YX,YY,YZ,ZY,XX,ZZ**. And each two-local pauli operator is transformed into a suitable equivalent circuit, and then a template is obtained after circuit optimization.
+>As an example, if all two-local pauli operators appear between the same qubits, they are arranged in the order **XY,XZ,ZX,YX,YY,YZ,ZY,XX,ZZ**. And each two-local pauli operator is transformed into a suitable equivalent circuit, and then a template is obtained after circuit optimization.
 # The following packages are included in the simulation environment:
 | S/N | Package |  Version  || S/N | Package |  Version  |
 |:-----:| :-----: | :-----: |:-----:| :-----:| :-----: | :-----: | 
