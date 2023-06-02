@@ -1,9 +1,9 @@
 # **QUANTUM-QuantumSimulation**
 > Everyone can change the value of the parameter "**Hamiltonian =**" in the **main.py** file to compare the results of different optimizers. **TemplateMatching.py** file includes functions for **quantum circuit optimization** and **template circuit preparation**, etc.
 # The following packages are included in the simulation environment:
-| S/N | Package |  Version  |
-|:-----:| :-----: | :-----: | 
-|1|Jinja2	|3.0.3	|
+| S/N | Package |  Version  | S/N | Package |  Version  |
+|:-----:| :-----: | :-----: | |:-----:| :-----: | :-----: | 
+|1|Jinja2	|3.0.3	||72|pandas	|1.4.2	|
 |2|Mako	|1.2.3	|
 |3|MarkupSafe	|2.1.1	|
 |4|Pillow	|9.1.0	|
@@ -74,7 +74,7 @@
 |69|opt-einsum	|3.3.0	|
 |70|packaging	|21.3	|
 |71|pamela	|1.0.0	|
-|72|pandas	|1.4.2	|
+
 |73|pandocfilters	|1.5.0	|
 |74|parso	|0.8.3	|
 |75|pbr	|5.9.0	|
