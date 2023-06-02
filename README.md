@@ -5,11 +5,11 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 
 >**Quantum circuit optimization**：
 >
->Including two consecutive CNOTs can be eliminated, two identical revolving gates can be fused, etc.
+>Including two consecutive CNOTs can be eliminated, two identical rotational gates can be fused, etc.
 >
 >**Template circuit preparation**：
 >
->As an example, if all two-local pauli operators appear between the same qubits, they are arranged in the order **XY,XZ,ZX,YX,YY,YZ,ZY,XX,ZZ**. And each two-local pauli operator is transformed into a suitable equivalent circuit, and then a template is obtained after circuit optimization.
+>As an example, if all two-local pauli operators appear between the same qubits, they are arranged in the order **XY,XZ,ZX,YX,YY,YZ,ZY,XX,ZZ**. And each two-local pauli operator is transformed into a suitable equivalent circuits ( can be proved by the rules of [ZX-calculus](https://zxcalculus.com/)) , and then a template is obtained after circuit optimization.
 # The following packages are included in the simulation environment:
 | S/N | Package |  Version  || S/N | Package |  Version  |
 |:-----:| :-----: | :-----: |:-----:| :-----:| :-----: | :-----: | 
