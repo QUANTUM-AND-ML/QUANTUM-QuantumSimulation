@@ -5,7 +5,7 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 
 >**Quantum circuit optimization**：
 >
->Including two consecutive CNOT doors can be eliminated, two identical revolving doors can be fused, etc.
+>Including two consecutive CNOTs can be eliminated, two identical revolving gates can be fused, etc.
 >
 >**Template circuit preparation**：
 >
