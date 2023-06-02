@@ -3,7 +3,7 @@
 # The following packages are included in the simulation environment:
 | S/N | Package |  Version  || S/N | Package |  Version  |
 |:-----:| :-----: | :-----: |:-----:| :-----:| :-----: | :-----: | 
-|1|Jinja2	|3.0.3	|72|pandas	|1.4.2	|
+|1|Jinja2	|3.0.3	||72|pandas	|1.4.2	|
 |2|Mako	|1.2.3	||73|pandocfilters	|1.5.0	|
 |3|MarkupSafe	|2.1.1	||74|parso	|0.8.3	|
 |4|Pillow	|9.1.0	||75|pbr	|5.9.0	|
