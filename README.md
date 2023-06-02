@@ -1,7 +1,7 @@
 # **QUANTUM-QuantumSimulation**
 Everyone can change the value of the parameter "**Hamiltonian =**" in the **main.py** file to compare the results of different optimizers.  
 
-**TemplateMatching.py** file includes functions for **quantum circuit optimization** and **template circuit preparation**
+**TemplateMatching.py** file includes functions for **quantum circuit optimization** and **template circuit preparation**：
 
 >**quantum circuit optimization**
 >Including two consecutive CNOT doors can be eliminated, two identical revolving doors can be fused, etc.
