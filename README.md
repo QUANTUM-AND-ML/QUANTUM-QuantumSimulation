@@ -6,6 +6,37 @@
 <h3><p align="center">Updated, Scalable, Easy Implement, Easy Reading and Comprehension</p></h3>
 
 
+<p align="center">
+    <a href="https://github.com/QUANTUM-AND-ML/QUANTUM-QuantumSimulation/blob/main/LICENSE">
+        <img alt="MIT License" src="https://img.shields.io/github/license/QUANTUM-AND-ML/QUANTUM-QuantumSimulation">
+    </a>
+    <a href="https://torchquantum.readthedocs.io/">
+        <img alt="Documentation" src="https://img.shields.io/readthedocs/torchquantum/main">
+    </a>
+    <a href="https://join.slack.com/t/torchquantum/shared_invite/zt-1ghuf283a-OtP4mCPJREd~367VX~TaQQ">
+        <img alt="Chat @ Slack" src="https://img.shields.io/badge/slack-chat-2eb67d.svg?logo=slack">
+    </a>
+    <a href="https://qmlsys.hanruiwang.me">
+        <img alt="Forum" src="https://img.shields.io/discourse/status?server=https%3A%2F%2Fqmlsys.hanruiwang.me%2F">
+    </a>
+    <a href="https://qmlsys.mit.edu">
+        <img alt="Website" src="https://img.shields.io/website?up_message=qmlsys&url=https%3A%2F%2Fqmlsys.mit.edu">
+    </a>
+
+   <a href="https://pypi.org/project/torchquantum/">
+        <img alt="Pypi" src="https://img.shields.io/pypi/v/torchquantum">
+    </a>
+       <a href="https://unitary.fund/">
+        <img alt="Pypi" src="https://img.shields.io/badge/supported%20by-Unitary%20Fund-green">
+    </a>
+
+
+</p>
+<br />
+
+
+
+
 ## Quantum simulation
 Relevant scripts and data for the paper entitled "Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching"
 
