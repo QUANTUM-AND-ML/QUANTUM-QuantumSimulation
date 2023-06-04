@@ -10,11 +10,8 @@
     <a href="https://github.com/QUANTUM-AND-ML/QUANTUM-QuantumSimulation/blob/main/LICENSE">
         <img alt="MIT License" src="https://img.shields.io/github/license/QUANTUM-AND-ML/QUANTUM-QuantumSimulation">
     </a>
-    <a href="https://torchquantum.readthedocs.io/">
-        <img alt="Documentation" src="https://img.shields.io/readthedocs/torchquantum/main">
-    </a>
-    <a href="https://join.slack.com/t/torchquantum/shared_invite/zt-1ghuf283a-OtP4mCPJREd~367VX~TaQQ">
-        <img alt="Chat @ Slack" src="https://img.shields.io/badge/slack-chat-2eb67d.svg?logo=slack">
+    <a href="https://www.python.org/downloads/release/python-3813/">
+        <img alt="Version" src="https://img.shields.io/badge/Python-3.8-orange">
     </a>
     <a href="https://github.com/search?q=repo%3AQUANTUM-AND-ML%2FQUANTUM-QuantumSimulation++language%3APython&type=code">
         <img alt="Language" src="https://img.shields.io/github/languages/top/QUANTUM-AND-ML/QUANTUM-QuantumSimulation">
@@ -24,6 +21,9 @@
     </a>
        <a href="https://www.nsfc.gov.cn/english/site_1/index.html">
         <img alt="Fund" src="https://img.shields.io/badge/supported%20by-NSFC-green">
+    </a>
+    <a href="https://twitter.com/FindOne0258">
+        <img alt="twitter" src="https://img.shields.io/badge/twitter-chat-2eb67d.svg?logo=twitter">
     </a>
 
 
