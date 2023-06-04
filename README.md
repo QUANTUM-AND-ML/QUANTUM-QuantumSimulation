@@ -59,8 +59,8 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 
 ## Dependencies
 - 3.9 >= Python >= 3.7 (Python 3.10 may have the `concurrent` package issue for Qiskit)
-- qiskit >= 0.36.1
-- pytket >= 1.2
+- Qiskit >= 0.36.1
+- Pytket >= 1.2
 - Parallel computing may require NVIDIA GPUs acceleration
 
 ## Benchmarking environment
