@@ -19,7 +19,7 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 >**Template circuit preparation**：
 >
 >As an example, if all two-local pauli operators appear between the same qubits, they are arranged in the order **XY, XZ, ZX, YX, YY, YZ, ZY, XX, ZZ**. And each two-local pauli operator is transformed into a **suitable equivalent circuit** ( proved by the rules of [ZX-calculus](https://zxcalculus.com/)) , and then a template is obtained after circuit optimization.
-# Simulation environment:
+# Dependencies:
 | S/N | Package |  Version  || S/N | Package |  Version  |
 |:-----:| :-----: | :-----: |:-----:| :-----:| :-----: | :-----: | 
 |1|Jinja2	|3.0.3	||72|pandas	|1.4.2	|
