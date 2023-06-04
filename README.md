@@ -63,7 +63,7 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 - Pytket >= 1.2
 - Parallel computing may require NVIDIA GPUs acceleration
 
-## Benchmarking environment
+### Benchmarking environment
 | S/N | Package |  Version  || S/N | Package |  Version  |
 |:-----:| :-----: | :-----: |:-----:| :-----:| :-----: | :-----: | 
 |1|Jinja2	|3.0.3	||72|pandas	|1.4.2	|
