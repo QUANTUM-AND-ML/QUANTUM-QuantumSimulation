@@ -39,6 +39,7 @@ Relevant scripts and data for the paper entitled "Practical Circuit Optimization
 ## Table of contents
 * [Python scripts](#Python-scripts)
 * [Dependencies](#Dependencies)
+* [Benchmarking environment](#Benchmarking-environment)
 ## Python scripts
 Everyone can change the value of the parameter "**Hamiltonian =**" in the **main.py** file to compare the results of different optimizers.  
 
@@ -51,7 +52,14 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 >**Template circuit preparation**：
 >
 >As an example, if all two-local pauli operators appear between the same qubits, they are arranged in the order **XY, XZ, ZX, YX, YY, YZ, ZY, XX, ZZ**. And each two-local pauli operator is transformed into a **suitable equivalent circuit** ( proved by the rules of [ZX-calculus](https://zxcalculus.com/)) , and then a template is obtained after circuit optimization.
-## Dependencies:
+
+## Dependencies
+- 3.9 >= Python >= 3.7 (Python 3.10 may have the `concurrent` package issue for Qiskit)
+- qiskit >= 0.36.1
+- pytket >= 1.2
+- Parallel computing may require NVIDIA GPUs acceleration
+
+## Benchmarking environment
 | S/N | Package |  Version  || S/N | Package |  Version  |
 |:-----:| :-----: | :-----: |:-----:| :-----:| :-----: | :-----: | 
 |1|Jinja2	|3.0.3	||72|pandas	|1.4.2	|
