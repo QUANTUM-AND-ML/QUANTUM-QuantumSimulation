@@ -3,6 +3,8 @@
 </p>
 
 <h2><p align="center">A PyThon Library for Quantum Computation and Machine Learning</p></h2>
+<h3><p align="center">Updated, Scalable, Easy Implement, Easy Reading and Comprehension</p></h3>
+
 
 ## Quantum simulation
 Relevant scripts and data for the paper entitled "Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching"
