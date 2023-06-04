@@ -4,10 +4,10 @@
 
 <h2><p align="center">A PyThon Library for Quantum Computation and Machine Learning</p></h2>
 
-# Quantum simulation
+## Quantum simulation
 Relevant scripts and data for the paper entitled "Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching"
 
-# Python scripts
+## Python scripts
 Everyone can change the value of the parameter "**Hamiltonian =**" in the **main.py** file to compare the results of different optimizers.  
 
 **TemplateMatching.py** file includes functions for **Quantum circuit optimization** and **Template circuit preparation**：
@@ -19,7 +19,7 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 >**Template circuit preparation**：
 >
 >As an example, if all two-local pauli operators appear between the same qubits, they are arranged in the order **XY, XZ, ZX, YX, YY, YZ, ZY, XX, ZZ**. And each two-local pauli operator is transformed into a **suitable equivalent circuit** ( proved by the rules of [ZX-calculus](https://zxcalculus.com/)) , and then a template is obtained after circuit optimization.
-# Dependencies:
+## Dependencies:
 | S/N | Package |  Version  || S/N | Package |  Version  |
 |:-----:| :-----: | :-----: |:-----:| :-----:| :-----: | :-----: | 
 |1|Jinja2	|3.0.3	||72|pandas	|1.4.2	|
