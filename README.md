@@ -1,8 +1,9 @@
 <p align="center">
-<img src="Q&ML.png" alt="torchquantum Logo" width="800">
+<img src="Q&ML.png" alt="Q&ML Logo" width="800">
 </p>
 
-<h2><p align="center">A PyTorch Library for Quantum Simulation and Quantum Machine Learning</p></h2>
+<h2><p align="center">A PyThon Library for Quantum Computation and Machine Learning</p></h2>
+
 # QUANTUM-QuantumSimulation
 Relevant scripts and data for the paper entitled "Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching"
 
