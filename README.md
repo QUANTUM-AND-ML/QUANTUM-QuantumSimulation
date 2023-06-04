@@ -16,18 +16,14 @@
     <a href="https://join.slack.com/t/torchquantum/shared_invite/zt-1ghuf283a-OtP4mCPJREd~367VX~TaQQ">
         <img alt="Chat @ Slack" src="https://img.shields.io/badge/slack-chat-2eb67d.svg?logo=slack">
     </a>
-    <a href="https://qmlsys.hanruiwang.me">
-        <img alt="Forum" src="https://img.shields.io/discourse/status?server=https%3A%2F%2Fqmlsys.hanruiwang.me%2F">
+    <a href="https://github.com/search?q=repo%3AQUANTUM-AND-ML%2FQUANTUM-QuantumSimulation++language%3APython&type=code">
+        <img alt="Language" src="https://img.shields.io/github/languages/top/QUANTUM-AND-ML/QUANTUM-QuantumSimulation">
     </a>
-    <a href="https://qmlsys.mit.edu">
-        <img alt="Website" src="https://img.shields.io/website?up_message=qmlsys&url=https%3A%2F%2Fqmlsys.mit.edu">
-    </a>
-
-   <a href="https://pypi.org/project/torchquantum/">
-        <img alt="Pypi" src="https://img.shields.io/pypi/v/torchquantum">
+   <a href="https://github.com/QUANTUM-AND-ML/QUANTUM-QuantumSimulation/activity">
+        <img alt="Activity" src="https://img.shields.io/github/last-commit/QUANTUM-AND-ML/QUANTUM-QuantumSimulation">
     </a>
        <a href="https://www.nsfc.gov.cn/english/site_1/index.html">
-        <img alt="Pypi" src="https://img.shields.io/badge/supported%20by-NSFC-green">
+        <img alt="Fund" src="https://img.shields.io/badge/supported%20by-NSFC-green">
     </a>
 
 
