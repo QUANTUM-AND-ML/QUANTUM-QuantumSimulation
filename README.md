@@ -8,8 +8,8 @@
 Relevant scripts and data for the paper entitled "Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching"
 
 ## Table of contents
-* [Python scripts](Python-scripts)
-* [Dependencies](Dependencies)
+* [Python scripts](#Python-scripts)
+* [Dependencies](#Dependencies)
 ## Python scripts
 Everyone can change the value of the parameter "**Hamiltonian =**" in the **main.py** file to compare the results of different optimizers.  
 
