@@ -204,7 +204,6 @@ def rule_CX(ansatz):
                 Count = Count - 1
         i = i + 1
         Count = Count - 1
-    #print('使用规则CX次数:',len(ansatz) - len(new_ansatz))
     return new_ansatz
 
 # Delete two duplicate H-gates
