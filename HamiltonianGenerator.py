@@ -24,7 +24,6 @@ import numpy as np
 import random
 
 
-
 gateRegex = re.compile(r'[IXYZ]')
 pauliRegex = re.compile(r'[XYZ]\d+')
 qubitRegex = re.compile(r'\d+')
