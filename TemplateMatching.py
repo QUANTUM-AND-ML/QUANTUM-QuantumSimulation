@@ -965,7 +965,5 @@ def simplification(local2gate_simplification):
             circuit_simplification_full.cx(gates[i][1],gates[i][2])
         else:
             pass
-    #circuit_simplification_full.draw(output='mpl')
-    #plt.show()
-
+    
     return circuit_simplification , circuit_simplification_full
