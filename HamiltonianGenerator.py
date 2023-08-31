@@ -209,4 +209,3 @@ def gene_dot_3d(w, h, l, interaction='Z'):
             ps[k+(w+1)*(h+1)] = interaction
             oplist.append("".join(ps))
     return oplist
-
