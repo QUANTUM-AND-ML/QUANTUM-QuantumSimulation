@@ -37,13 +37,10 @@
 Relevant scripts and data for the paper entitled "Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching"
 
 ## Table of contents
-* [**Previous work**](#Previous-work)
 * [**Python scripts**](#Python-scripts)
 * [**Dependencies**](#Dependencies)
 * [**Benchmarking environment**](#Benchmarking-environment)
 
-## Previous work
-Our work in this paper builds on previous quantum simulation work. Our previous submission is called "[**Greedy algorithm based circuit optimization for near-term quantum simulation**](https://iopscience.iop.org/article/10.1088/2058-9565/ac796b)". In previous work, we develop a hardware-agnostic circuit optimization algorithm to reduce the overall circuit cost for Hamiltonian simulation problems. Our method employ a novel sub-circuit synthesis in intermediate representation and propose a greedy ordering scheme for gate cancellation to minimize the gate count and circuit depth.
 ## Python scripts
 Everyone can change the value of the parameter "**Hamiltonian =**" in the **main.py** file to compare the results of different optimizers.  
 
