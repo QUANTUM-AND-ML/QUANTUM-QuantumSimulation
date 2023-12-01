@@ -120,6 +120,7 @@ if __name__ == '__main__':
     result,local2gate = Benchmarking(parr)
     #print(local2gate)
     local2gate_initial = list(set(local2gate))
+    print('the number of two-local strings:', len(local2gate_initial))
     Benchmarking(local2gate_initial)
     #print(local2gate_initial)
     # 字符串赋值
