@@ -62,30 +62,24 @@ def Benchmarking(circuit):
     #---------------------------------------------------------------------------------------- 
     #                    Compute Gate count and Circuit depth
     #---------------------------------------------------------------------------------------- 
-    results['gateCount']['DFS'] = sum(Outputcircuit_DFS.count_ops().values())
     results['depth']['DFS'] = Outputcircuit_DFS.depth()
     results['CNOTCount']['DFS'] = count_CX(list(Outputcircuit_DFS.count_ops().keys()),list(Outputcircuit_DFS.count_ops().values()))
 
-    results['gateCount']['EC'] = sum(Outputcircuit_EC.count_ops().values())
     results['depth']['EC'] = Outputcircuit_EC.depth()
     results['CNOTCount']['EC'] = count_CX(list(Outputcircuit_EC.count_ops().keys()),list(Outputcircuit_EC.count_ops().values()))
 
-    results['gateCount']['paulihedral'] = paulihedral_result['gateCount']
     results['depth']['paulihedral'] = paulihedral_result['depth']
     results['CNOTCount']['paulihedral'] = paulihedral_result['CNOTCount']
 
-    results['gateCount']['qiskit'] = qiskit_result['gateCount']
     results['depth']['qiskit'] = qiskit_result['depth']
     results['CNOTCount']['qiskit'] = qiskit_result['CNOTCount']
 
-    results['gateCount']['tket'] = tk_result['gateCount']
     results['depth']['tket'] = tk_result['depth']
     results['CNOTCount']['tket'] = tk_result['CNOTCount']
     
 
     for optimizer in ['DFS','EC','paulihedral','qiskit','tket']:
         print('   ' + optimizer)
-        print('gate count:\t' + str(results['gateCount'][optimizer]))
         print('CNOT count:\t',results['CNOTCount'][optimizer])
         print('depth:\t\t' + str(results['depth'][optimizer]) + '\n')
 
@@ -111,9 +105,9 @@ if __name__ == '__main__':
     #     (output Order of the circuit before and after optimization, output benchmarking
     #              results, draw the circuit by plotting qiskit QuantumCircuit)
     #----------------------------------------------------------------------------------------
-    #parr = gene_random_oplist(12)
-    Hamiltonian = CH2 # Can be modified to (HF, LiH, H2O, NH2, CH2, NH3, CH4, etc.)
-    parr = gene_molecule_oplist(Hamiltonian)
+    parr = gene_random_oplist(6)
+    #Hamiltonian = CH2 # Can be modified to (H2, LiH, H2O, NH2, CH2)
+    #parr = gene_molecule_oplist(Hamiltonian)
     #heisen_parr = [gene_dot_1d(29, interaction='Z')+gene_dot_1d(29, interaction='X')+gene_dot_1d(29, interaction='Y'), gene_dot_2d(4,5, interaction='Z')+gene_dot_2d(4,5, interaction='Y')+gene_dot_2d(4,5, interaction='X'), gene_dot_3d(1,2,4, interaction='Z')+gene_dot_3d(1,2,4, interaction='Y')+gene_dot_3d(1,2,4, interaction='X')]
     #print(heisen_parr[0])
     #moles = ['LiH', 'BeH2', 'CH4', 'MgH', 'LiCl', 'CO2']
@@ -126,6 +120,7 @@ if __name__ == '__main__':
     result,local2gate = Benchmarking(parr)
     #print(local2gate)
     local2gate_initial = list(set(local2gate))
+    Benchmarking(local2gate_initial)
     #print(local2gate_initial)
     # 字符串赋值
     local2gate_initial_mark = []  
