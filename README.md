@@ -34,7 +34,7 @@
 
 
 ## Quantum simulation
-Relevant scripts and data for the paper entitled "Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching"
+Relevant scripts and data for the paper entitled "[**Practical Circuit Optimization Algorithm for Quantum Simulation Based on Template Matching**](https://link.springer.com/article/10.1007/s11128-023-04252-2)"
 
 ## Table of contents
 * [**Python scripts**](#Python-scripts)
