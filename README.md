@@ -60,6 +60,20 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 - Pytket >= 1.2
 - Parallel computing may require NVIDIA GPUs acceleration
 
+## Citation
+```
+@article{liu2024practical,
+  title={Practical circuit optimization algorithm for quantum simulation based on template matching},
+  author={Liu, Yuxiang and Zhang, Zaichen and Hu, Yi and Meng, Fanxu and Luan, Tian and Zhang, Xianchao and Yu, Xutao},
+  journal={Quantum Information Processing},
+  volume={23},
+  number={2},
+  pages={45},
+  year={2024},
+  publisher={Springer}
+}
+```
+
 ## Benchmarking environment
 | S/N | Package |  Version  || S/N | Package |  Version  |
 |:-----:| :-----: | :-----: |:-----:| :-----:| :-----: | :-----: | 
