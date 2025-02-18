@@ -147,3 +147,4 @@ Everyone can change the value of the parameter "**Hamiltonian =**" in the **main
 |69|opt-einsum	|3.3.0	||140|yfinance	|0.1.70	|
 |70|packaging	|21.3	||141|zipp	|3.8.0	|
 |71|pamela	|1.0.0	|
+
