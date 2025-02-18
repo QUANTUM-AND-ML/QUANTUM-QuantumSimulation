@@ -26,7 +26,6 @@
         <img alt="twitter" src="https://img.shields.io/badge/twitter-chat-2eb67d.svg?logo=twitter">
     </a>
 
-
 </p>
 <br />
 
