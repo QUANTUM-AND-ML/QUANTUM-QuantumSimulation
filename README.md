@@ -38,6 +38,7 @@ Relevant scripts and data for the paper entitled "[**Practical Circuit Optimizat
 ## Table of contents
 * [**Python scripts**](#Python-scripts)
 * [**Dependencies**](#Dependencies)
+* [**Citation**](#Citation)
 * [**Benchmarking environment**](#Benchmarking-environment)
 
 ## Python scripts
