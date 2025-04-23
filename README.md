@@ -1,5 +1,5 @@
 <p align="center">
-<img src="Q&ML.png" alt="Q&ML Logo" width="600">
+<img src="https://cdn.jsdelivr.net/gh/QUANTUM-AND-ML/QUANTUM-QuantumSimulation@main/Q&ML.png" alt="Q&ML Logo" width="600">
 </p>
 
 <h2><p align="center">A PyThon Library for Quantum Computation and Machine Learning</p></h2>
